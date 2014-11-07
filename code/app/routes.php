@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('start');
-});
+Route::get('/', function(){return View::make('start');});
 
 //Sesssions
 Route::get('login', 'SessionsController@create');

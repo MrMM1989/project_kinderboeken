@@ -1,9 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-    @if(isset($test))
-        <h1>Test</h1>
+    @if(isset($name))
+        <h1>Welkom {{$name}}</h1>
+        <a href="{{{ URL::to('logout') }}}">Verlaat de burcht</a>
     @else
-        <h1>Welkom</h1>
+        <a href="{{{ URL::to('login') }}}">Ga de burcht binnen</a>
     @endif
 @stop

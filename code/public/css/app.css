@@ -1,13 +1,13 @@
-#header
-{
-    width: 100%;
-    height: 200px;
-    background-color: black;
-    text-align: center;
-}
-
-#header h1
-{
-    color: white;
-    
-}
+/* Elementen die in master.blade.php staan */
+#header{width: 100%; height: 200px; background-color: black; text-align: center;}
+#header h1{color: white;}
+#content{width: 80%; margin-left: 10%;}
+#menuHolder{width: 100%; margin: 1% 0 1% 0;}
+#menu li{float: left; width: auto; padding: 0 1.5% 0 1.5%;}
+#menu li:first-child{padding: 0 1.5% 0 0;}
+#menu li:not(:last-child){border-right: solid 1px black;}
+/* Zelf aangemaakte klassen die vaak voorkomen */
+.clear{clear: both;}
+/* Standaard HTML - tags */
+a, a:visited{color: blue;}
+h1{font-size: xx-large; margin-bottom: 1%;}

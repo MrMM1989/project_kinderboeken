@@ -3,7 +3,7 @@
     <head>
         <title>
             @section('title')
-                Orde van de boekenridders
+                Orde van de Boekenridders
             @show
         </title>
         {{HTML::style('css/reset.css')}}
@@ -11,7 +11,15 @@
     </head>
     <body>
         <div id="header"><h1>Orde van de Boekenridders</h1></div>
-        @section('content')
-        @show
+        <div id="content">
+            <div id="menuHolder">
+                <ul id="menu">
+                    <li><a href="">Home</a></li><li><a href="">Nieuws</a></li><li><a href="">Wat is de orde?</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            @section('content')
+            @show
+        </div>
     </body>
 </html>

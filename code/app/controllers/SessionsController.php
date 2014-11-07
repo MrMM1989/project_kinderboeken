@@ -1,7 +1,7 @@
 <?php
 
-class SessionsController extends \BaseController {
-
+class SessionsController extends \BaseController 
+{
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -31,7 +31,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-		if(Auth::attempt(Input::only('email', 'password'))) {return Redirect::action('SessionsController@show');}
+		if(Auth::attempt(Input::only('email', 'password'))) {$name = Auth::user()->username; return View::make('start', ['name'=>$name]);}
         
         return Redirect::back()->withInput(); //zorgt ervoor dat de inputvelden die al ingevuld waren ingevuld blijven
 	}
