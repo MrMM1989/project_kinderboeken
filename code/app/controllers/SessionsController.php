@@ -31,7 +31,11 @@ class SessionsController extends \BaseController
 	 */
 	public function store()
 	{
-		if(Auth::attempt(Input::only('email', 'password'))) {$name = Auth::user()->username; return View::make('start', ['name'=>$name]);}
+		if(Auth::attempt(Input::only('email', 'password'))) 
+        {
+            $name = Auth::user()->username; 
+            return View::make('start', ['name'=>$name]);
+        }
         
         return Redirect::back()->withInput(); //zorgt ervoor dat de inputvelden die al ingevuld waren ingevuld blijven
 	}
@@ -43,9 +47,16 @@ class SessionsController extends \BaseController
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
-        if(Auth::check()){return View::make('sessions.show');}else{return Redirect::action('SessionsController@create');}
+        if(Auth::check())
+        {
+            return Redirect::action('SessionsController@store');
+        }
+        else
+        {
+            return Redirect::action('SessionsController@create');
+        }
 	}
 
 
