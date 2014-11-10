@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function(){return View::make('start');});
-
+Route::get('/', function()
+{
+    $avis=Avi::lists('name', 'id');
+    
+    return View::make('start', ['avis'=>$avis]);
+});
 //Sesssions
-Route::get('login', 'SessionsController@create');
-Route::get('logout', 'SessionsController@destroy');
-Route::resource('sessions', 'SessionsController');
+Route::get('login', 'SessionController@create');
+Route::get('logout', 'SessionController@destroy');
+Route::resource('session', 'SessionController');
+//Searches
+Route::resource('search', 'SearchController');

@@ -6,9 +6,14 @@
     @endif
     <div id="leftSide">
         <h1>Ik zoek boeken met niveau</h1>
+        {{Form::open(['route'=>'search.store'])}}
+            {{Form::select('avi', array('avis'=>$avis), 0)}}
     </div>
     <div id="rightSide">
         <h1>en/of deze titel of auteur</h1>
+            {{Form::text('searchword', $value = null, $attributes=array('id'=>'searchword'))}}
+            <p>{{Form::submit('Zoeken', $attributes=array('id'=>'submit'))}}</p>
+        {{Form::close()}}
     </div>
     <div id="session">
         @if(isset($name))
