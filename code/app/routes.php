@@ -14,8 +14,15 @@
 Route::get('/', function()
 {
     $avis=Avi::lists('name', 'id');
-    
-    return View::make('start', ['avis'=>$avis]);
+    if(Auth::check())
+    {
+        $name = Auth::user()->username;
+        return View::make('start', ['name'=>$name, 'avis'=>$avis]);
+    }
+    else
+    {
+        return View::make('start', ['avis'=>$avis]);
+    }
 });
 //Sesssions
 Route::get('login', 'SessionController@create');

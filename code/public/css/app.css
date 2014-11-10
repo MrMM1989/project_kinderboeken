@@ -10,7 +10,6 @@
 #leftSide, #rightSide{width: 50%; float:left;}
 #rightSide{text-align: right;}
 #leftSide select, #rightSide #searchword{width:60%; margin-bottom: 2.5%}
-#session{float: right;}
 /* Zelf aangemaakte klassen die vaak voorkomen */
 .clear{clear: both;}
 /* Standaard HTML - tags */

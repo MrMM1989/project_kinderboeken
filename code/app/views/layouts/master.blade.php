@@ -21,5 +21,9 @@
             @section('content')
             @show
         </div>
+        {{HTML::script('js/jquery-1.11.1.min.js')}}
+        {{HTML::script('js/app.js')}}
+        @section('scripts')
+        @show
     </body>
 </html>
