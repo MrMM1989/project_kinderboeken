@@ -8,11 +8,7 @@ class SessionController extends \BaseController
 	 * @return Response
 	 */
 	public function index()
-	{
-		//
-	}
-
-
+    {}
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -41,8 +37,6 @@ class SessionController extends \BaseController
         
         return Redirect::back()->withInput(); //zorgt ervoor dat de inputvelden die al ingevuld waren ingevuld blijven
 	}
-
-
 	/**
 	 * Display the specified resource.
 	 *
@@ -53,39 +47,16 @@ class SessionController extends \BaseController
 	{
         if(Auth::check())
         {
-            return Redirect::action('SessionController@store');
+            $avis=Avi::lists('name', 'id');
+            $name = Auth::user()->username; 
+            
+            return View::make('start', ['name'=>$name, 'avis'=>$avis]);
         }
         else
         {
             return Redirect::action('SessionController@create');
         }
 	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-
 	/**
 	 * Remove the specified resource from storage.
 	 *
