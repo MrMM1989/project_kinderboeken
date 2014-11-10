@@ -1,15 +1,10 @@
 /* Elementen die in master.blade.php staan */
-#header{width: 100%; text-align: center;}
-#header img{width: 100%;}
-#header h1{color: white;}
-#content{width: 70%; margin-left: 15%; background: white;}
-#menuHolder{width: 100%; margin: 2.5% 0 2.5% 0; font-size: large; }
-#menu li{float: left; width: auto; padding: 0 1.5% 0 1.5%;}
-#menu li:first-child{padding: 0 1.5% 0 0;}
-#menu li:not(:last-child){border-right: solid 1px black;}
-
+#content{width: 50%; padding: 2.5%; margin: 12.5% 0 0 22.5%; position: relative;background: rgba(250, 250, 250, 0.8);}
+#menuHolder{margin-bottom: 2.5%;}
+#menu li{float: left; margin-right: 2.5%; padding-right: 2.5%;}
+#menu li:not(:last-child){border-right: black 1px solid}
 /* Elementen exclusief voor start.blade.php */
-#leftSide, #rightSide{width: 50%; float:left;}
+#leftSide, #rightSide{width: 50%; float: left;}
 #rightSide{text-align: right;}
 #leftSide select, #rightSide #searchword{width:75%; margin-bottom: 2.5%}
 
@@ -17,21 +12,16 @@
 .clear{clear: both;}
 
 /* Standaard HTML - tags */
-a, a:visited{color: blue;}
+a, a:visited{color: blue; text-decoration: none;}
 h1{font-size: xx-large; margin-bottom: 2.5%;}
-body{font-family: "Arial Black", Gadget, sans-serif;}
+body{font-family: "Arial Black", Gadget, sans-serif;background-repeat:no-repeat;background-size:cover;}
 
 /* Media Queries */
         @media (max-width: 1100px)
         {
          /* Van toepassing op master.blade.php*/
-            #header{background: white;}
-            #content{width: 90%; margin-left: 5%;}
          /* Van toepassing op start.blade.php */
-            #leftSide, #rightSide{width: 100%;text-align: left;}
-            #leftSide select, #rightSide #searchword{width: 100%;}
          /* Van toepassing op standaard HTML - tags */
-            h1{font-size: x-large;}
         }
         @media (max-width: 500px)
         {h1{font-size: medium;}}

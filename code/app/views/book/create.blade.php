@@ -29,6 +29,6 @@
 
 @section('scripts')
     <script type="text/javascript">
-        {{"guest();"}}
+        {{"loggedIn();"}}
     </script>
 @stop

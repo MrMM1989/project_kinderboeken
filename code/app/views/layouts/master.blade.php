@@ -9,8 +9,7 @@
         {{HTML::style('css/reset.css')}}
         {{HTML::style('css/app.css')}}
     </head>
-    <body>
-        <div id="header">{{HTML::image('img/Header_Web_2.jpg')}}</div>
+    <body background="{{ URL::asset('img/Header_Image.jpg');}}">
         <div id="content">
             <div id="menuHolder">
                 <ul id="menu">

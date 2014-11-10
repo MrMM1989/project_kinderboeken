@@ -2,10 +2,10 @@
 
 @section('content')
     @if(isset($name))
-        <h1>Welkom {{$name}}</h1>
+        <h1>Welkom {{$name}},</h1>
     @endif
     <div id="leftSide">
-        <h1>Ik zoek boeken met niveau</h1>
+        <h1>zoek boek met niveau</h1>
         {{Form::open(['route'=>'search.store'])}}
             <p>{{Form::select('avi', array('avis'=>$avis), 0)}}</p>
     </div>
