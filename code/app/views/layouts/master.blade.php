@@ -10,7 +10,7 @@
         {{HTML::style('css/app.css')}}
     </head>
     <body>
-        <div id="header"><h1>Orde van de Boekenridders</h1></div>
+        <div id="header">{{HTML::image('img/Header_Web_2.jpg')}}</div>
         <div id="content">
             <div id="menuHolder">
                 <ul id="menu">
