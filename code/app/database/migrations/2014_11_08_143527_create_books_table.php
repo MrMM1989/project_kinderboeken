@@ -27,7 +27,7 @@ class CreateBooksTable extends Migration {
                   ->onUpdate('cascade');
             $table->string('title', 50);
             $table->string('author', 50);
-            $table->string('publisher', 50);
+            $table->string('publisher', 50)->nullable();
             $table->string('about')->nullable();
 			$table->timestamps();
 		});

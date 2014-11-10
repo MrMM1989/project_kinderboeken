@@ -14,7 +14,7 @@
         <div id="content">
             <div id="menuHolder">
                 <ul id="menu">
-                    <li><a href="{{{ URL::to('/') }}}">Home</a></li><li><a href="">Nieuws</a></li><li><a href="">Wat is de orde?</a></li>
+                    <li><a href="{{{ URL::to('/') }}}">Home</a></li>
                 </ul>
                 <div class="clear"></div>
             </div>

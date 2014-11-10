@@ -33,3 +33,5 @@ Route::resource('search', 'SearchController');
 //Users
 Route::get('register', 'UserController@create');
 Route::resource('user', 'UserController');
+//Books
+Route::resource('book', 'BookController');

@@ -29,7 +29,7 @@ body{font-family: "Arial Black", Gadget, sans-serif;}
             #content{width: 90%; margin-left: 5%;}
          /* Van toepassing op start.blade.php */
             #leftSide, #rightSide{width: 100%;text-align: left;}
-            #leftSide select, #rightSide #searchword{width: 90%;}
+            #leftSide select, #rightSide #searchword{width: 100%;}
          /* Van toepassing op standaard HTML - tags */
             h1{font-size: x-large;}
         }

@@ -47,7 +47,7 @@ class SessionController extends \BaseController
 	{
         if(Auth::check())
         {
-            $avis=Avi::lists('name', 'id');
+            $avis = Avi::lists('name', 'id');
             $name = Auth::user()->username; 
             
             return View::make('start', ['name'=>$name, 'avis'=>$avis]);
