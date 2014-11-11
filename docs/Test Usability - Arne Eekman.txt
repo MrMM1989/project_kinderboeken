@@ -1,0 +1,17 @@
+Testpersoon: 
+	Arne Eekman
+
+Algemene informatie: 
+	Arne is een vader van 5 en grootvader van 4 kinderen. 
+	Hij is niet de meest handige persoon als het over computers en
+	het internet gaat maar heeft altijd wel een uitgesproken mening
+	over alles en iedereen.
+
+Feedback:
+	- Het design ziet er mooi en, zeer belangrijk, kalm uit.
+	- Content is misschien iets te kaal.
+	- Alles is mooi groot, enkel het menu mag iets groter.
+	- Alles is snel te vinden.
+
+Extra's:
+	Toffe achtergrond afbeelding!
