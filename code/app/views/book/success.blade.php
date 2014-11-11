@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    Het boek "{{$title}}" is toegevoegd aan de Orde.
+    <h2>Het boek "{{$title}}" is toegevoegd aan de Orde.</h2>
 @stop
 
 @section('scripts')

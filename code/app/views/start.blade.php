@@ -13,9 +13,6 @@
         <h2>zoek boek met niveau</h2>
         {{Form::open(['route'=>'search.store'])}}
         {{Form::select('avi', array('avis'=>$avis), 0, $attributes=array('id'=>'select_avi'))}}
-        <div id="infoHolder">
-            Avi Start(S3) is een niveau voorbehouden voor kinderen die net aan het eerste leerjaar zijn begonnen.
-        </div>
         <div class="clear"></div>
     </div>
     <div>

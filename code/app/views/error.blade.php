@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-    <p>U moet ingelogd zijn om deze pagina te zien!</p>
+    <h2>U moet ingelogd zijn om deze pagina te zien!</h2>
 @stop

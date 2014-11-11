@@ -24,6 +24,10 @@ Route::get('/', function()
         return View::make('start', ['avis'=>$avis]);
     }
 });
+Route::get('info', function()
+{
+    return View::make('info');
+});
 //Sessions
 Route::get('login', 'SessionController@create');
 Route::get('logout', 'SessionController@destroy');

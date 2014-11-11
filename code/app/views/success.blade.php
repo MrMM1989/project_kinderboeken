@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section ('content')
-    <p>Gefeliciteerd, u bent nu een lid van de Orde!</p>
+    <h2>Gefeliciteerd, u bent nu een lid van de Orde!</h2>
 @stop
 
 @section('scripts')

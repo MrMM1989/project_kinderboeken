@@ -4,7 +4,7 @@ $(function()
 
 function guest()
 {
-    $("#menuHolder ul").append('<li><a href="">Wat is de orde?</a></li>')
+    $("#menuHolder ul").append('<li><a href="/info">Wat is de orde?</a></li>')
                        .append('<li><a href="/login">Login</a></li>')
                        .append('<li><a href="/register">Registreer</a></li>');
 }
