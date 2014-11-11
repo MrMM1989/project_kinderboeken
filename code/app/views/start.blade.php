@@ -2,7 +2,7 @@
 
 @section('welcome')
     @if(isset($name))
-        <h1>Welkom {{$name}},</h1>
+        <h1>Welkom {{{$name}}},</h1>
     @else
         <h1>Welkom</h1>
     @endif

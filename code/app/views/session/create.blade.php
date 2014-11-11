@@ -7,7 +7,7 @@
 @section('content')
     {{Form::open(['route'=>'session.store'])}}
     <div>
-          <h2>E-mail:</h2>
+          <h2>E-mail</h2>
           {{Form::email('email')}}
     </div>
     <div>

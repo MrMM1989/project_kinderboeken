@@ -1,23 +1,37 @@
+/* Variabelen */
 $bg_color: #f7f2e7;
 $mrgn_bttm: 2.5%;
+$large_mrgn_bttm: $mrgn_bttm * 2;
 
 /* Standaard HTML - tags */
 body{background: $bg_color; font-family: 'Lobster Two', cursive;}
-h1{font-size: 300%; font-weight: bold; margin-bottom: $mrgn_bttm * 2;}
+h1{font-size: 300%; font-weight: bold; margin-bottom: $large_mrgn_bttm;}
 h2{font-size: 200%; margin-bottom: $mrgn_bttm;}
-input:not(.submit){height: 35px; font-size: 30px; margin-bottom: $mrgn_bttm; width: 100%;}
-select{margin-bottom: 2.5%; height: 35px; font-size: 30px;}
+input:not(.submit), select{height: 35px; font-size: 30px; margin-bottom: $mrgn_bttm; width: 99%;}
 p{margin-bottom: $mrgn_bttm;}
+textarea{width: 100%; resize: none;}
 
-/* Veel gebruikte klasses die nergers thuishoren */
+/* Veel gebruikte klasses die nergens thuishoren */
 .clear{clear:both;}
-.submit{float: right; font-size: 20px;}
+.submit{float: right; font-size: 20px; margin-bottom: $mrgn_bttm;}
 
 /* Master.blade.php */
 #header_img, #footer_img{width: 100%;}
 #content{padding: 2.5% 0 2.5% 0; width: 50%; margin-left: 25%;}
 #menu li{float: left; margin-bottom: $mrgn_bttm; padding-right: 2.5%;}
 
-/* Start.blade.php */
-#select_avi{width: 40%;}
-#infoHolder{float: right; width: 50%;}
+/* Media Queries */
+@media (max-width: 680px)
+{
+    /* Standaard HTML - tags */
+    h1{font-size: x-large;}
+    h2{font-size: medium;}
+    p{margin-bottom: $large_mrgn_bttm;}
+    select, input:not(.submit){height: 30px; font-size: 25px; width: 97.5%;}
+    
+    /* Veel gebruikte klasses die nergens thuishoren */
+    .submit{width: 100%; margin-bottom: $large_mrgn_bttm; float: none;}
+    
+    /* Master.blade.php */
+    #menu li{float: none; margin-bottom: $large_mrgn_bttm;}
+}

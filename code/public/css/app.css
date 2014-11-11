@@ -1,3 +1,4 @@
+/* Variabelen */
 /* Standaard HTML - tags */
 body {
   background: #f7f2e7;
@@ -12,27 +13,27 @@ h2 {
   font-size: 200%;
   margin-bottom: 2.5%; }
 
-input:not(.submit) {
+input:not(.submit), select {
   height: 35px;
   font-size: 30px;
   margin-bottom: 2.5%;
-  width: 100%; }
-
-select {
-  margin-bottom: 2.5%;
-  height: 35px;
-  font-size: 30px; }
+  width: 99%; }
 
 p {
   margin-bottom: 2.5%; }
 
-/* Veel gebruikte klasses die nergers thuishoren */
+textarea {
+  width: 100%;
+  resize: none; }
+
+/* Veel gebruikte klasses die nergens thuishoren */
 .clear {
   clear: both; }
 
 .submit {
   float: right;
-  font-size: 20px; }
+  font-size: 20px;
+  margin-bottom: 2.5%; }
 
 /* Master.blade.php */
 #header_img, #footer_img {
@@ -48,10 +49,30 @@ p {
   margin-bottom: 2.5%;
   padding-right: 2.5%; }
 
-/* Start.blade.php */
-#select_avi {
-  width: 40%; }
+/* Media Queries */
+@media (max-width: 680px) {
+  /* Standaard HTML - tags */
+  h1 {
+    font-size: x-large; }
 
-#infoHolder {
-  float: right;
-  width: 50%; }
+  h2 {
+    font-size: medium; }
+
+  p {
+    margin-bottom: 5%; }
+
+  select, input:not(.submit) {
+    height: 30px;
+    font-size: 25px;
+    width: 97.5%; }
+
+  /* Veel gebruikte klasses die nergens thuishoren */
+  .submit {
+    width: 100%;
+    margin-bottom: 5%;
+    float: none; }
+
+  /* Master.blade.php */
+  #menu li {
+    float: none;
+    margin-bottom: 5%; } }
