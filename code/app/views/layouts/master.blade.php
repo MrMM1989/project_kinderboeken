@@ -13,14 +13,14 @@
     <body>
         {{HTML::image('img/header.jpg', null, array('id'=>'header_img'))}}
         <div id="content">
-            @section('welcome')
-            @show
             <div id="menuHolder">
                 <ul id="menu">
                     <li><a href="{{{ URL::to('/') }}}">Home</a></li>
                 </ul>
             </div>
             <div class="clear"></div>
+            @section('welcome')
+            @show
             @section('content')
             @show
         </div>

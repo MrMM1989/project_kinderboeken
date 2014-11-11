@@ -1,5 +1,16 @@
 $(function()
 {
+    $("#aviHolder p").hide();
+    thisName = $("#select_avi").val();
+    $("#aviHolder p:not(#" + thisName + ")").slideUp();
+    $("#aviHolder #" + thisName).slideDown();
+    
+    $("#select_avi").change(function()
+    {
+        thisName = $(this).val();
+        $("#aviHolder p:not(#" + thisName + ")").slideUp();
+        $("#aviHolder #" + thisName).slideDown();
+    });
 });
 
 function guest()

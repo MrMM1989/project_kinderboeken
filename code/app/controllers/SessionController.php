@@ -29,10 +29,11 @@ class SessionController extends \BaseController
 	{
 		if(Auth::attempt(Input::only('email', 'password'))) 
         {
-            $avis=Avi::lists('name', 'id');
+            $avis=Avi::lists('name', 'id'); //met Avi::lists krijg je een lijst terug wat een beter format is voor <select> als een array
+            $avis_desc=DB::Table('avis')->select('id', 'description')->get();
             $name = Auth::user()->username; 
             
-            return View::make('start', ['name'=>$name, 'avis'=>$avis]);
+            return View::make('start', ['name'=>$name, 'avis'=>$avis, 'avis_desc'=>$avis_desc]);
         }
         
         return Redirect::back()->withInput(); //zorgt ervoor dat de inputvelden die al ingevuld waren ingevuld blijven

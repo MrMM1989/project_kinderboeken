@@ -18,14 +18,14 @@ textarea{width: 100%; resize: none;}
 /* Master.blade.php */
 #header_img, #footer_img{width: 100%;}
 #content{padding: 2.5% 0 2.5% 0; width: 50%; margin-left: 25%;}
-#menu li{float: left; margin-bottom: $mrgn_bttm; padding-right: 2.5%;}
+#menu li{float: left; margin-bottom: $mrgn_bttm * 3; padding-right: 2.5%;}
 
 /* Media Queries */
-@media (max-width: 680px)
+@media (max-width: 680px) /* Wordt uitgevoerd als het scherm 680, of minder, pixels breed is  */
 {
     /* Standaard HTML - tags */
     h1{font-size: x-large;}
-    h2{font-size: medium;}
+    h2{font-size: 125%;}
     p{margin-bottom: $large_mrgn_bttm;}
     select, input:not(.submit){height: 30px; font-size: 25px; width: 97.5%;}
     

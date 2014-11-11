@@ -4,15 +4,20 @@
     @if(isset($name))
         <h1>Welkom {{{$name}}},</h1>
     @else
-        <h1>Welkom</h1>
+        <h1>Welkom bij de Boekenridders</h1>
     @endif
 @stop
 
 @section('content')
     <div id="avi_select_div">
-        <h2>zoek boek met niveau</h2>
+        <h2>zoek een boek met niveau</h2>
         {{Form::open(['route'=>'search.store'])}}
         {{Form::select('avi', array('avis'=>$avis), 0, $attributes=array('id'=>'select_avi'))}}
+        <div id="aviHolder">
+            @foreach($avis_desc as $aa)
+                <p id="{{{$aa->id}}}">{{{$aa->description}}}</p>
+            @endforeach
+        </div>
         <div class="clear"></div>
     </div>
     <div>

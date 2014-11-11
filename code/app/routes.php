@@ -14,14 +14,15 @@
 Route::get('/', function()
 {
     $avis=Avi::lists('name', 'id');
+    $avis_desc=DB::Table('avis')->select('id', 'description')->get();
     if(Auth::check())
     {
         $name = Auth::user()->username;
-        return View::make('start', ['name'=>$name, 'avis'=>$avis]);
+        return View::make('start', ['name'=>$name, 'avis'=>$avis, 'avis_desc'=>$avis_desc]);
     }
     else
     {
-        return View::make('start', ['avis'=>$avis]);
+        return View::make('start', ['avis'=>$avis, 'avis_desc'=>$avis_desc]);
     }
 });
 Route::get('info', function()
