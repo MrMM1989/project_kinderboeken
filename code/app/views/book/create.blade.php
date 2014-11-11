@@ -1,29 +1,32 @@
 @extends('layouts.master')
 
-@section('content')
+@section('welcome')
     <h1>Voeg een boek toe</h1>
+@stop
+
+@section('content')
     {{Form::open(['route'=>'book.store'])}}
     <div>
-        {{Form::label('title', 'Titel:')}}
+        <h2>Titel:</h2>
         {{Form::text('title')}}
     </div>
     <div>
-        {{Form::label('author', 'Auteur:')}}
+        <h2>Auteur:</h2>
         {{Form::text('author')}}
     </div>
     <div>
-        {{Form::label('avi', 'Avi - Niveau:')}}
+        <h2>Avi - Niveau</h2>
         {{Form::select('avi', array('avis'=>$avis), 0)}}
     </div>
     <div>
-        {{Form::label('publisher', 'Uitgeverij:')}}
+        <h2>Uitgeverij:</h2>
         {{Form::text('publisher')}}
     </div>
     <div>
-        {{Form::label('about', 'Korte Samenvatting:')}}<br />
+        <h2>Korte Samenvatting:</h2>
         {{Form::textarea('about', null, ['size' => '30x5','resize' => 'none'])}}
     </div>
-    <div>{{Form::submit('Voeg Toe')}}</div>
+    <div>{{Form::submit('Voeg Toe', $attributes=array('class'=>'submit'))}}</div>
     {{Form::close()}}
 @stop
 

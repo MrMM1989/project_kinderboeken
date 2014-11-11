@@ -1,18 +1,27 @@
 @extends('layouts.master')
 
-@section('content')
+@section('welcome')
     @if(isset($name))
         <h1>Welkom {{$name}},</h1>
+    @else
+        <h1>Welkom</h1>
     @endif
-    <div id="leftSide">
-        <h1>zoek boek met niveau</h1>
+@stop
+
+@section('content')
+    <div id="avi_select_div">
+        <h2>zoek boek met niveau</h2>
         {{Form::open(['route'=>'search.store'])}}
-            <p>{{Form::select('avi', array('avis'=>$avis), 0)}}</p>
+        {{Form::select('avi', array('avis'=>$avis), 0, $attributes=array('id'=>'select_avi'))}}
+        <div id="infoHolder">
+            Avi Start(S3) is een niveau voorbehouden voor kinderen die net aan het eerste leerjaar zijn begonnen.
+        </div>
+        <div class="clear"></div>
     </div>
-    <div id="rightSide">
-        <h1>en/of deze titel of auteur</h1>
-            <p>{{Form::text('searchword', $value = null, $attributes=array('id'=>'searchword'))}}</p>
-            <p>{{Form::submit('Zoeken', $attributes=array('id'=>'submit'))}}</p>
+    <div>
+        <h2>en/of deze titel of auteur</h2>
+        {{Form::text('searchword', $value = null, $attributes=array('id'=>'searchword'))}}<br />
+        {{Form::submit('Zoeken', $attributes=array('class'=>'submit'))}}
         {{Form::close()}}
     </div>
     <div class="clear"></div>

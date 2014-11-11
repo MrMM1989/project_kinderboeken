@@ -1,0 +1,22 @@
+$bg_color: #f7f2e7;
+$mrgn_bttm: 2.5%;
+
+/* Standaard HTML - tags */
+body{background: $bg_color; font-family: 'Lobster Two', cursive;}
+h1{font-size: 300%; font-weight: bold; margin-bottom: $mrgn_bttm * 2;}
+h2{font-size: 200%; margin-bottom: $mrgn_bttm;}
+input:not(.submit){height: 35px; font-size: 30px; margin-bottom: $mrgn_bttm; width: 100%;}
+select{margin-bottom: 2.5%; height: 35px; font-size: 30px;}
+
+/* Veel gebruikte klasses die nergers thuishoren */
+.clear{clear:both;}
+.submit{float: right; font-size: 20px;}
+
+/* Master.blade.php */
+#header_img, #footer_img{width: 100%;}
+#content{padding: 2.5% 0 2.5% 0; width: 50%; margin-left: 25%;}
+#menu li{float: left; margin-bottom: $mrgn_bttm; padding-right: 2.5%;}
+
+/* Start.blade.php */
+#select_avi{width: 40%;}
+#infoHolder{float: right; width: 50%;}

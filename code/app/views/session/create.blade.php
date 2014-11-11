@@ -1,17 +1,20 @@
 @extends('layouts.master')
 
-@section('content')
+@section('welcome')
     <h1>Kom binnen in de burcht</h1>
+@stop
+
+@section('content')
     {{Form::open(['route'=>'session.store'])}}
     <div>
-          {{Form::label('email', 'E - mail:')}}
+          <h2>E-mail:</h2>
           {{Form::email('email')}}
     </div>
     <div>
-          {{Form::label('password', 'Password:')}}
+          <h2>Wachtwoord</h2>
           {{Form::password('password')}}
     </div>
-    <div>{{Form::submit('Kom binnen')}}</div>
+    <div>{{Form::submit('Kom binnen', $attributes=array('class'=>'submit'))}}</div>
     {{Form::close()}}
 @stop
 

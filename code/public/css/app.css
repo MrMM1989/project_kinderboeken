@@ -1,27 +1,54 @@
-/* Elementen die in master.blade.php staan */
-#content{width: 50%; padding: 2.5%; margin: 12.5% 0 0 22.5%; position: relative;background: rgba(250, 250, 250, 0.8);}
-#menuHolder{margin-bottom: 2.5%;}
-#menu li{float: left; margin-right: 2.5%; padding-right: 2.5%;}
-#menu li:not(:last-child){border-right: black 1px solid}
-/* Elementen exclusief voor start.blade.php */
-#leftSide, #rightSide{width: 50%; float: left;}
-#rightSide{text-align: right;}
-#leftSide select, #rightSide #searchword{width:75%; margin-bottom: 2.5%}
-
-/* Zelf aangemaakte klassen die vaak voorkomen */
-.clear{clear: both;}
-
 /* Standaard HTML - tags */
-a, a:visited{color: blue; text-decoration: none;}
-h1{font-size: xx-large; margin-bottom: 2.5%;}
-body{font-family: "Arial Black", Gadget, sans-serif;background-repeat:no-repeat;background-size:cover;}
+body {
+  background: #f7f2e7;
+  font-family: 'Lobster Two', cursive; }
 
-/* Media Queries */
-        @media (max-width: 1100px)
-        {
-         /* Van toepassing op master.blade.php*/
-         /* Van toepassing op start.blade.php */
-         /* Van toepassing op standaard HTML - tags */
-        }
-        @media (max-width: 500px)
-        {h1{font-size: medium;}}
+h1 {
+  font-size: 300%;
+  font-weight: bold;
+  margin-bottom: 5%; }
+
+h2 {
+  font-size: 200%;
+  margin-bottom: 2.5%; }
+
+input:not(.submit) {
+  height: 35px;
+  font-size: 30px;
+  margin-bottom: 2.5%;
+  width: 100%; }
+
+select {
+  margin-bottom: 2.5%;
+  height: 35px;
+  font-size: 30px; }
+
+/* Veel gebruikte klasses die nergers thuishoren */
+.clear {
+  clear: both; }
+
+.submit {
+  float: right;
+  font-size: 20px; }
+
+/* Master.blade.php */
+#header_img, #footer_img {
+  width: 100%; }
+
+#content {
+  padding: 2.5% 0 2.5% 0;
+  width: 50%;
+  margin-left: 25%; }
+
+#menu li {
+  float: left;
+  margin-bottom: 2.5%;
+  padding-right: 2.5%; }
+
+/* Start.blade.php */
+#select_avi {
+  width: 40%; }
+
+#infoHolder {
+  float: right;
+  width: 50%; }

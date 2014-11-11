@@ -1,21 +1,24 @@
 @extends('layouts.master')
 
-@section('content')
+@section('welcome')
     <h1>Wordt lid van de Orde</h1>
+@stop
+
+@section('content')
     {{Form::open(['route'=>'user.store'])}}
     <div>
-        {{Form::label('email', 'E - mail:')}}
+        <h2>E-mail</h2>
         {{Form::email('email')}}
     </div>
     <div>
-        {{Form::label('username', 'Gebruikersnaam')}}
+        <h2>Gebruikersnaam</h2>
         {{Form::text('username')}}
     </div>
     <div>
-        {{Form::label('password', 'Password:')}}
+        <h2>Wachtwoord</h2>
         {{Form::password('password')}}
     </div>
-    <div>{{Form::submit('Wordt Lid')}}</div>
+    <div>{{Form::submit('Wordt Lid', $attributes=array('class'=>'submit'))}}</div>
     {{Form::close()}}
 @stop
 
