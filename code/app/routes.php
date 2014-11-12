@@ -30,6 +30,7 @@ Route::get('info', function()
     return View::make('info');
 });
 //Sessions
+Route::get('session', 'SessionController@create');
 Route::get('login', 'SessionController@create');
 Route::get('logout', 'SessionController@destroy');
 Route::resource('session', 'SessionController');
@@ -40,3 +41,5 @@ Route::get('register', 'UserController@create');
 Route::resource('user', 'UserController');
 //Books
 Route::resource('book', 'BookController');
+//Errors
+App::missing(function($exception){return Response::view('error_404', array(), 404);});

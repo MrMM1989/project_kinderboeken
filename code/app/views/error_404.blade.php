@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
+@section('welcome')
+    <h1>Pagina niet gevonden!</h1>
+@stop
+
 @section('content')
-    <h2>U moet ingelogd zijn om deze pagina te zien!</h2>
+    <p>Deze pagina bestaat niet. Heeft u misschien een fout getypt?</p>
 @stop
 
 @section('scripts')

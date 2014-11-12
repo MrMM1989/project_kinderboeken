@@ -9,7 +9,8 @@ class BookController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		If(Auth::check()){return View::make('error_noBook');}
+        else{return View::make('error');}
 	}
 
 
@@ -20,16 +21,8 @@ class BookController extends \BaseController {
 	 */
 	public function create()
     {
-        If(Auth::check())
-        {
-            $avis=Avi::lists('name', 'id');
-            
-            return View::make('book.create', ['avis'=>$avis]);
-        }
-        else
-        {
-            View::make('error');
-        }
+        If(Auth::check()){$avis=Avi::lists('name', 'id');return View::make('book.create', ['avis'=>$avis]);}
+        else{View::make('error');}
     }
 	/**
 	 * Store a newly created resource in storage.

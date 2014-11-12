@@ -7,9 +7,10 @@ $large_mrgn_bttm: $mrgn_bttm * 2;
 body{background: $bg_color; font-family: 'Lobster Two', cursive;}
 h1{font-size: 300%; font-weight: bold; margin-bottom: $large_mrgn_bttm;}
 h2{font-size: 200%; margin-bottom: $mrgn_bttm;}
-input:not(.submit), select{height: 35px; font-size: 30px; margin-bottom: $mrgn_bttm; width: 99%;}
+input:not(.submit), select{height: 35px; font-size: 25px; margin-bottom: $mrgn_bttm; width: 99%;}
 p{margin-bottom: $mrgn_bttm;}
 textarea{width: 100%; resize: none;}
+a, a:visited{color: blue;}
 
 /* Veel gebruikte klasses die nergens thuishoren */
 .clear{clear:both;}
@@ -18,7 +19,7 @@ textarea{width: 100%; resize: none;}
 /* Master.blade.php */
 #header_img, #footer_img{width: 100%;}
 #content{padding: 2.5% 0 2.5% 0; width: 50%; margin-left: 25%;}
-#menu li{float: left; margin-bottom: $mrgn_bttm * 3; padding-right: 2.5%;}
+#menu li{float: left; margin-bottom: $mrgn_bttm * 2.5; padding-right: 2.5%;}
 
 /* Media Queries */
 @media (max-width: 680px) /* Wordt uitgevoerd als het scherm 680, of minder, pixels breed is  */
@@ -27,7 +28,7 @@ textarea{width: 100%; resize: none;}
     h1{font-size: x-large;}
     h2{font-size: 125%;}
     p{margin-bottom: $large_mrgn_bttm;}
-    select, input:not(.submit){height: 30px; font-size: 25px; width: 97.5%;}
+    select, input:not(.submit){height: 30px; font-size: 20px; width: 97.5%;}
     
     /* Veel gebruikte klasses die nergens thuishoren */
     .submit{width: 100%; margin-bottom: $large_mrgn_bttm; float: none;}

@@ -1,10 +1,13 @@
 $(function()
 {
     $("#aviHolder p").hide();
+     
+    /* Laat de informatie van het geselecteerde AVI - niveau zien bij het laden van de pagina */
     thisName = $("#select_avi").val();
     $("#aviHolder p:not(#" + thisName + ")").slideUp();
-    $("#aviHolder #" + thisName).slideDown();
+    $("#aviHolder #" + thisName).show();
     
+    /* Past de informatie aan elke keer de gebruiker een andere optie kiest */
     $("#select_avi").change(function()
     {
         thisName = $(this).val();

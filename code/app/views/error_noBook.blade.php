@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
+@section('welcome')
+    <h1>Geen nieuw boek.</h1>
+@stop
+
 @section('content')
-    <h2>U moet ingelogd zijn om deze pagina te zien!</h2>
+    <p>U heeft geen nieuw boek toegevoegd.</p>
 @stop
 
 @section('scripts')

@@ -8,7 +8,9 @@ class SessionController extends \BaseController
 	 * @return Response
 	 */
 	public function index()
-    {}
+    {
+        if(Auth::check()){return Redirect::action('SessionController@show');}else{return View::make('session.create');}
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

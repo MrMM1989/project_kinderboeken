@@ -15,7 +15,7 @@ h2 {
 
 input:not(.submit), select {
   height: 35px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 2.5%;
   width: 99%; }
 
@@ -25,6 +25,9 @@ p {
 textarea {
   width: 100%;
   resize: none; }
+
+a, a:visited {
+  color: blue; }
 
 /* Veel gebruikte klasses die nergens thuishoren */
 .clear {
@@ -46,7 +49,7 @@ textarea {
 
 #menu li {
   float: left;
-  margin-bottom: 7.5%;
+  margin-bottom: 6.25%;
   padding-right: 2.5%; }
 
 /* Media Queries */
@@ -63,7 +66,7 @@ textarea {
 
   select, input:not(.submit) {
     height: 30px;
-    font-size: 25px;
+    font-size: 20px;
     width: 97.5%; }
 
   /* Veel gebruikte klasses die nergens thuishoren */
