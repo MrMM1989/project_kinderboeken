@@ -67,8 +67,9 @@ class SessionController extends \BaseController
         {
             $avis = Avi::lists('name', 'id');
             $name = Auth::user()->username; 
+            $avis_desc=DB::Table('avis')->select('id', 'description')->get();
             
-            return View::make('start', ['name'=>$name, 'avis'=>$avis]);
+            return View::make('start', ['name'=>$name, 'avis'=>$avis, 'avis_desc'=>$avis_desc]);
         }
         else
         {

@@ -52,8 +52,6 @@ class BookController extends \BaseController {
                 $book->save();
             
                 $title = $input['title'];
-                
-                return View::make('book.success', ['title'=>$title]);
         }
         else{return Redirect::to('/book/create')->withInput()->withErrors($v);}
 	}
