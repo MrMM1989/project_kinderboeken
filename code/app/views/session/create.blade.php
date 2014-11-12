@@ -5,6 +5,13 @@
 @stop
 
 @section('content')
+    <ul class="userErrors">
+        <li>{{ $errors->first('email') }}</li>
+        <li>{{ $errors->first('password') }}</li>
+        @if(Session::has('message'))
+            <li>{{{ Session::get('message') }}}</li>
+        @endif
+    </ul>
     {{Form::open(['route'=>'session.store'])}}
     <div>
           <h2>E-mail</h2>
