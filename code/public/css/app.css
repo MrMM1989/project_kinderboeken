@@ -13,10 +13,6 @@ h2 {
   font-size: 200%;
   margin-bottom: 2.5%; }
 
-h3 {
-  font-weight: bold;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
-
 input:not(.submit), select {
   height: 35px;
   font-size: 25px;
@@ -63,15 +59,6 @@ a, a:visited {
   margin-bottom: 6.25%;
   padding-right: 2.5%;
   font-size: 120%; }
-
-/* Search/show.blade.php */
-.searchResult {
-  width: 100%;
-  float: left;
-  border-bottom: 1px black solid; }
-
-#content .searchResult:not(:first-child) {
-  margin-top: 2.5%; }
 
 /* Media Queries */
 @media (max-width: 680px) {
