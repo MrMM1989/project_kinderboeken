@@ -14,7 +14,29 @@ class SearchController extends \BaseController
 
     public function store()
     {
-        return 'hoera';
+        $input = Input::all();
+        $avi = $input['avi'];
+        
+        if($input['searchword'] != '')
+        {
+            
+            $results = DB::select
+                       ("SELECT books.*, avis.name 
+                         FROM books JOIN avis ON avis.id = books.fk_avi
+                         WHERE title = '".$input['searchword']."' OR author = '".$input['searchword']."' AND fk_avi = '".$input['avi']."'");
+            $searchword = $input['searchword'];
+            
+            return View::make('search.show', ['results'=>$results, 'searchword'=>$searchword]);
+        }
+        else
+        {
+            $results = DB::select
+                       ("SELECT books.*, avis.name 
+                         FROM books JOIN avis ON avis.id = books.fk_avi
+                         WHERE fk_avi = '".$input['avi']."'");
+            
+            return View::make('search.show', ['results'=>$results]);
+        }
     }
     
     public function show($id)
