@@ -1,0 +1,17 @@
+Testpersoon:
+	Marinka Eekman
+
+Algemene Informatie:
+	Marinka is tante van 4 kinderen die graag boeken koopt als cadeau.
+	Ze is ook project manager en online marketeer voor het bedrijf 'Senz Umbrellas'. 
+	
+Feedback:
+	- Het gebruikte font valt niet gemakkelijk te lezen in grote blokken tekst
+	- Rustig ogend design
+	- De site straalt een kindvriendelijke riddersfeer uit
+	- Gebruiksvriendelijk
+
+Extra's:
+	Implementatie van social media?
+	Boekenridders is een catchy naam
+	Zoeken op onderwerp?
