@@ -9,7 +9,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('error.error_404');
 	}
 
 
@@ -67,7 +67,7 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return View::make('error.error_404');
 	}
 
 
@@ -79,7 +79,7 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('error.error_404');
 	}
 
 
@@ -91,7 +91,7 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		return View::make('error.error_404');
 	}
 
 
@@ -103,7 +103,7 @@ class UserController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return View::make('error.error_404');
 	}
 
 
