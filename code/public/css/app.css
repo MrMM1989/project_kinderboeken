@@ -20,7 +20,9 @@ input:not(.submit), select {
   width: 99%; }
 
 p {
-  margin-bottom: 2.5%; }
+  margin-bottom: 2.5%;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 110%; }
 
 textarea {
   width: 99%;
@@ -55,7 +57,8 @@ a, a:visited {
 #menu li {
   float: left;
   margin-bottom: 6.25%;
-  padding-right: 2.5%; }
+  padding-right: 2.5%;
+  font-size: 120%; }
 
 /* Media Queries */
 @media (max-width: 680px) {
@@ -67,7 +70,8 @@ a, a:visited {
     font-size: 125%; }
 
   p {
-    margin-bottom: 5%; }
+    margin-bottom: 5%;
+    font-size: 100%; }
 
   select, input:not(.submit) {
     height: 30px;
@@ -89,4 +93,5 @@ a, a:visited {
   /* Master.blade.php */
   #menu li {
     float: none;
-    margin-bottom: 5%; } }
+    margin-bottom: 5%;
+    font-size: 100%; } }

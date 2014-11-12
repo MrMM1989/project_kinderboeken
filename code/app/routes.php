@@ -20,15 +20,9 @@ Route::get('/', function()
         $name = Auth::user()->username;
         return View::make('start', ['name'=>$name, 'avis'=>$avis, 'avis_desc'=>$avis_desc]);
     }
-    else
-    {
-        return View::make('start', ['avis'=>$avis, 'avis_desc'=>$avis_desc]);
-    }
+    else{return View::make('start', ['avis'=>$avis, 'avis_desc'=>$avis_desc]);}
 });
-Route::get('info', function()
-{
-    return View::make('info');
-});
+Route::get('info', function(){return View::make('info');});
 //Sessions
 Route::get('session', 'SessionController@create');
 Route::get('login', 'SessionController@create');
@@ -42,4 +36,4 @@ Route::resource('user', 'UserController');
 //Books
 Route::resource('book', 'BookController');
 //Errors
-App::missing(function($exception){return Response::view('error_404', array(), 404);});
+App::missing(function($exception){return Response::view('error.error_404', array(), 404);});

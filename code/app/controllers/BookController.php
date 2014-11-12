@@ -9,8 +9,8 @@ class BookController extends \BaseController {
 	 */
 	public function index()
 	{
-		If(Auth::check()){return View::make('error_noBook');}
-        else{return View::make('error');}
+		If(Auth::check()){return View::make('error.noBook');}
+        else{return View::make('error.error');}
 	}
 
 

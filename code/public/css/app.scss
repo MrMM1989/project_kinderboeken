@@ -8,7 +8,7 @@ body{background: $bg_color; font-family: 'Lobster Two', cursive;}
 h1{font-size: 300%; font-weight: bold; margin-bottom: $large_mrgn_bttm;}
 h2{font-size: 200%; margin-bottom: $mrgn_bttm;}
 input:not(.submit), select{height: 35px; font-size: 25px; margin-bottom: $mrgn_bttm; width: 99%;}
-p{margin-bottom: $mrgn_bttm;}
+p{margin-bottom: $mrgn_bttm; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; font-size: 110%;}
 textarea{width: 99%; resize: none; margin-bottom: $mrgn_bttm;}
 a, a:visited{color: blue;}
 
@@ -20,7 +20,7 @@ a, a:visited{color: blue;}
 /* Master.blade.php */
 #header_img, #footer_img{width: 100%;}
 #content{padding: 2.5% 0 2.5% 0; width: 50%; margin-left: 25%;}
-#menu li{float: left; margin-bottom: $mrgn_bttm * 2.5; padding-right: 2.5%;}
+#menu li{float: left; margin-bottom: $mrgn_bttm * 2.5; padding-right: 2.5%; font-size: 120%;}
 
 /* Media Queries */
 @media (max-width: 680px) /* Wordt uitgevoerd als het scherm 680, of minder, pixels breed is  */
@@ -28,7 +28,7 @@ a, a:visited{color: blue;}
     /* Standaard HTML - tags */
     h1{font-size: x-large;}
     h2{font-size: 125%;}
-    p{margin-bottom: $large_mrgn_bttm;}
+    p{margin-bottom: $large_mrgn_bttm; font-size: 100%;}
     select, input:not(.submit){height: 30px; font-size: 20px; width: 97.5%;}
     textarea{margin-bottom: $mrgn_bttm * 2;}
     
@@ -37,5 +37,5 @@ a, a:visited{color: blue;}
     .userErrors{margin-bottom: $large_mrgn_bttm;}
     
     /* Master.blade.php */
-    #menu li{float: none; margin-bottom: $large_mrgn_bttm;}
+    #menu li{float: none; margin-bottom: $large_mrgn_bttm; font-size: 100%;}
 }
