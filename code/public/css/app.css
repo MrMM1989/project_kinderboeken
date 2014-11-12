@@ -38,6 +38,10 @@ a, a:visited {
   font-size: 20px;
   margin-bottom: 2.5%; }
 
+.userErrors {
+  color: red;
+  margin-bottom: 2.5%; }
+
 /* Master.blade.php */
 #header_img, #footer_img {
   width: 100%; }

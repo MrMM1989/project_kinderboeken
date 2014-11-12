@@ -15,6 +15,7 @@ a, a:visited{color: blue;}
 /* Veel gebruikte klasses die nergens thuishoren */
 .clear{clear:both;}
 .submit{float: right; font-size: 20px; margin-bottom: $mrgn_bttm;}
+.userErrors{color: red; margin-bottom: $mrgn_bttm;}
 
 /* Master.blade.php */
 #header_img, #footer_img{width: 100%;}

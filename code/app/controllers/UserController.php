@@ -33,7 +33,14 @@ class UserController extends \BaseController {
 	{
 		$input = Input::all();
         $rules = array('username'=>'required|unique:users', 'email'=>'required|unique:users', 'password'=>'required');
-        $v = Validator::make($input, $rules);
+        $messages = array(
+                            'username.required' => 'Het veld "gebruikersnaam" is verplicht.',
+                            'email.required' => 'Het veld "E - mail" is verplicht.',
+                            'password.required' => 'Het veld "wachtwoord" is verplicht.',
+                            'username.unique' => 'Deze gebruikersnaam bestaat al in de Orde.',
+                            'email.unique' => 'Dit mail - adres bestaat al in de Orde.'
+                         );
+        $v = Validator::make($input, $rules, $messages);
             
             if($v->passes())
             {   
@@ -45,7 +52,10 @@ class UserController extends \BaseController {
                 
                 return View::make('success');
             }
-            else{return Redirect::to('register')->withInput();}
+            else
+            {
+                return Redirect::to('register')->withInput()->withErrors($v);
+            }
 	}
 
 

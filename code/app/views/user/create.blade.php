@@ -5,6 +5,11 @@
 @stop
 
 @section('content')
+    <ul class="userErrors">
+        <li>{{ $errors->first('email') }}</li>
+        <li>{{ $errors->first('username') }}</li>
+        <li>{{ $errors->first('password') }}</li>
+    </ul>
     {{Form::open(['route'=>'user.store'])}}
     <div>
         <h2>E-mail</h2>
