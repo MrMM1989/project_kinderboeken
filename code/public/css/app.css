@@ -23,8 +23,9 @@ p {
   margin-bottom: 2.5%; }
 
 textarea {
-  width: 100%;
-  resize: none; }
+  width: 99%;
+  resize: none;
+  margin-bottom: 2.5%; }
 
 a, a:visited {
   color: blue; }
@@ -73,11 +74,17 @@ a, a:visited {
     font-size: 20px;
     width: 97.5%; }
 
+  textarea {
+    margin-bottom: 5%; }
+
   /* Veel gebruikte klasses die nergens thuishoren */
   .submit {
     width: 100%;
     margin-bottom: 5%;
     float: none; }
+
+  .userErrors {
+    margin-bottom: 5%; }
 
   /* Master.blade.php */
   #menu li {

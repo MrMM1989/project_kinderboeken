@@ -5,6 +5,10 @@
 @stop
 
 @section('content')
+    <ul class="userErrors">
+        <li>{{ $errors->first('title') }}</li>
+        <li>{{ $errors->first('author') }}</li>
+    </ul>
     {{Form::open(['route'=>'book.store'])}}
     <div>
         <h2>Titel:</h2>

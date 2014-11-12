@@ -33,7 +33,12 @@ class BookController extends \BaseController {
 	{
 		$input = Input::all();
         $rules = array('title'=>'required|unique:books', 'author'=>'required');
-        $v = Validator::make($input, $rules);
+        $messages = array(
+                          'title.required' => 'Het veld "Titel" is verplicht.',
+                          'title.unique' => 'Deze titel bestaat al in de Orde.',
+                          'author.required' => 'Het veld "auteur" is verplicht.'
+                         );
+        $v = Validator::make($input, $rules, $messages);
         
         if($v->passes())
         {   
@@ -50,7 +55,7 @@ class BookController extends \BaseController {
                 
                 return View::make('book.success', ['title'=>$title]);
         }
-        else{return Redirect::to('/book/create')->withInput();}
+        else{return Redirect::to('/book/create')->withInput()->withErrors($v);}
 	}
 
 

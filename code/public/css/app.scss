@@ -9,7 +9,7 @@ h1{font-size: 300%; font-weight: bold; margin-bottom: $large_mrgn_bttm;}
 h2{font-size: 200%; margin-bottom: $mrgn_bttm;}
 input:not(.submit), select{height: 35px; font-size: 25px; margin-bottom: $mrgn_bttm; width: 99%;}
 p{margin-bottom: $mrgn_bttm;}
-textarea{width: 100%; resize: none;}
+textarea{width: 99%; resize: none; margin-bottom: $mrgn_bttm;}
 a, a:visited{color: blue;}
 
 /* Veel gebruikte klasses die nergens thuishoren */
@@ -30,9 +30,11 @@ a, a:visited{color: blue;}
     h2{font-size: 125%;}
     p{margin-bottom: $large_mrgn_bttm;}
     select, input:not(.submit){height: 30px; font-size: 20px; width: 97.5%;}
+    textarea{margin-bottom: $mrgn_bttm * 2;}
     
     /* Veel gebruikte klasses die nergens thuishoren */
     .submit{width: 100%; margin-bottom: $large_mrgn_bttm; float: none;}
+    .userErrors{margin-bottom: $large_mrgn_bttm;}
     
     /* Master.blade.php */
     #menu li{float: none; margin-bottom: $large_mrgn_bttm;}
